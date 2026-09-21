@@ -1,0 +1,38 @@
+import { useState, useEffect } from "react";
+
+export default function Home() {
+  const [pedidosSelecionados, setPedidosSelecionados] = useState([]);
+  
+  useEffect(() => {
+    const handlePratoSelecionado = (evento) => {
+      setPedidosSelecionados((estadoAnterior) => [
+        ...estadoAnterior,
+        evento.detail
+      ]);
+    };
+
+    window.addEventListener("pratoSelecionado", handlePratoSelecionado);
+
+    return () => {
+      window.removeEventListener("pratoSelecionado", handlePratoSelecionado);
+    };
+  }, []);
+
+  return (
+    <main>
+      <h1>Meu Pedido</h1>
+      
+      {pedidosSelecionados.map((prato) => (
+        <article key={prato.nome}>
+          <h2>{prato.nome}</h2>
+          <p>{prato.descricao}</p>
+          <p>{prato.preco}</p>
+        </article>
+      ))}
+
+      {pedidosSelecionados.length === 0 && (
+        <p>Nenhum prato adicionado.</p>
+      )}
+    </main>
+  );
+}
