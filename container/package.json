@@ -1,0 +1,26 @@
+{
+  "name": "container",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "overrides": {
+    "enhanced-resolve": "5.20.1"
+  },
+  "dependencies": {
+    "@module-federation/nextjs-mf": "8.8.23",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.25"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "15.5.25",
+    "@eslint/eslintrc": "^3",
+    "webpack": "5.90.3"
+  }
+}
