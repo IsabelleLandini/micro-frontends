@@ -28,7 +28,7 @@ export default function Home() {
         <article key={prato.nome}>
           <h2>{prato.nome}</h2>
           <p>{prato.descricao}</p>
-          <p>{prato.preco}</p>
+          <p>R$ {prato.preco.toFixed(2)}</p>
         </article>
       ))}
 

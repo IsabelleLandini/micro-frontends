@@ -1,13 +1,11 @@
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --card-background: #f7f7f7;
+  --border: #dddddd;
+  --button: #171717;
+  --button-text: #ffffff;
 }
 
 html,
@@ -35,8 +33,64 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+article {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-background);
+}
+
+article h2 {
+  margin-bottom: 8px;
+}
+
+article p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: var(--button);
+  color: var(--button-text);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 24px 16px;
+  }
+
+  article {
+    padding: 16px;
+  }
+
+  button {
+    width: 100%;
   }
 }
+
