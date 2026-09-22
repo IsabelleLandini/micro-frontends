@@ -1,4 +1,4 @@
-
+// Envia o prato selecionado para o Micro Pedido por meio de um evento global.
 
 export default function Prato ({nome, descricao, preco}) {
     

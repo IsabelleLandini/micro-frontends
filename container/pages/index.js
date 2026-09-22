@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { lazy, Suspense } from "react";
 
+// Carrega os componentes dos microfrontends somente quando forem necessários.
 const Prato = lazy(() => import("cardapio/Prato"));
 const Pedido = lazy(() => import("pedido/Pedido"));
 

@@ -5,6 +5,7 @@ export default function Home() {
   
   useEffect(() => {
     const handlePratoSelecionado = (evento) => {
+      // Adiciona o novo prato sem remover os itens já selecionados.
       setPedidosSelecionados((estadoAnterior) => [
         ...estadoAnterior,
         evento.detail
@@ -14,6 +15,7 @@ export default function Home() {
     window.addEventListener("pratoSelecionado", handlePratoSelecionado);
 
     return () => {
+      // Escuta os pratos selecionados enviados pelo Micro Cardápio.
       window.removeEventListener("pratoSelecionado", handlePratoSelecionado);
     };
   }, []);
