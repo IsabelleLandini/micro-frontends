@@ -279,7 +279,10 @@ Durante o desenvolvimento foram realizados testes para verificar:
 * Adição de múltiplos pratos ao pedido
 * Funcionamento em diferentes larguras de tela
 * Formatação dos preços
-* Build das três aplicações
+* Build das aplicações
+* Execução integrada com Cardápio na porta `3001`, Pedido na porta `3002` e Container na porta `3000`
+* Adição de pratos pelo Container e atualização do pedido sem remover os itens anteriores
+
 
 ## 👩🏻‍💻 Autora
 
