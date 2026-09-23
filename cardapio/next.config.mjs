@@ -1,5 +1,7 @@
 import { NextFederationPlugin } from '@module-federation/nextjs-mf';
 
+process.env.NEXT_PRIVATE_LOCAL_WEBPACK = "true";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
