@@ -145,11 +145,11 @@ O Container funciona como **host** e consome os dois microfrontends.
 
 ## Tecnologias utilizadas
 
-* Next.js 15
-* React 19
+* Next.js 14.2.35
+* React 18.3.1
 * JavaScript
-* Module Federation
-* Webpack
+* Module Federation — @module-federation/nextjs-mf 8.8.23
+* Webpack 5.90.3
 * Node.js 22
 * HTML
 * CSS
@@ -269,7 +269,7 @@ O layout utiliza CSS responsivo para manter os cards, textos e botões dentro da
 
 ## Testes realizados
 
-Durante o desenvolvimento foram realizados testes para verificar:
+Na configuração final do projeto, foram realizados testes para verificar:
 
 * Carregamento individual do Cardápio
 * Carregamento individual do Pedido
@@ -279,7 +279,7 @@ Durante o desenvolvimento foram realizados testes para verificar:
 * Adição de múltiplos pratos ao pedido
 * Funcionamento em diferentes larguras de tela
 * Formatação dos preços
-* Build das aplicações
+* Build das três aplicações
 * Execução integrada com Cardápio na porta `3001`, Pedido na porta `3002` e Container na porta `3000`
 * Adição de pratos pelo Container e atualização do pedido sem remover os itens anteriores
 
